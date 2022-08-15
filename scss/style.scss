@@ -1,0 +1,99 @@
+@import"./base/variables";
+@import "./base/listas";
+@import "./componentes/main";
+
+
+html{
+    font-size: nth($size, 1);
+    background-color: $bg-blanco;
+}
+
+*{
+    margin: nth($size, 2);
+    padding: nth($size, 2);
+    box-sizing: border-box;
+}
+
+.navClass{
+    a{
+    color: nth($colores, 1);
+    font-size: nth($size, 3);
+    margin: 2px;
+    }
+    a:hover{
+        color: nth($colores, 2);
+    }
+}
+
+.navbar-collapse{
+    flex-grow: 0;
+}
+
+.menuHamburguesa{
+    background-color: $bg-rojo; 
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: nth($size, 4);
+    color: nth($colores, 3);
+}
+
+.graciasPorVisitarnos{
+    p{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: nth($size, 4);
+        color: nth($colores, 2);
+        text-align: justify;
+    }
+}
+
+h2{
+    font-family:'Roboto', sans-serif;
+    font-size: nth($size, 4);
+    color: nth($colores , 3);
+}
+
+.quienesSomos{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: nth($size, 4);
+    color: nth($colores, 2);
+    text-align: justify;
+}
+
+.col-md-6{
+    font-size: nth($size, 7);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: nth($colores, 2);
+}
+
+hr{
+    border-top: 1px solid black;
+    height: 2px;
+    padding: 0;
+    margin: 20px auto 0 auto;
+}
+
+.column2{
+    ul{
+        li{
+            display: inline-block;
+            font-size: nth($size, 8);
+            list-style: none;
+            align-items: center;
+            padding: 2px;
+        }
+    }
+}
+
+.column3{
+    ul{
+        li{
+            font-size: nth($size, 8);
+            font-family: 'Times New Roman', Times, serif;
+            color: nth($colores, 2);
+            list-style: none;
+            text-align: justify;
+        }
+    }
+}

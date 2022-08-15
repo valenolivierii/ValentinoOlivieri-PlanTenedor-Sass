@@ -1,0 +1,25 @@
+.recetas{
+    h2{
+        font-family:'Roboto', sans-serif;
+        font-size: nth($size, 4);
+        color: nth($colores, 3);
+    }
+    ol{
+    li{
+        font-family: sans-serif ;
+        font-size: nth($size, 5);
+        color: nth($colores, 1);
+        text-align: left;
+        list-style: none;
+    }
+    }
+}
+
+.recetas2{
+    p{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: nth($size, 6);
+        color: nth($colores, 2);
+        text-align: justify;
+    }
+}
