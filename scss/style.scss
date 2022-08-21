@@ -1,5 +1,8 @@
 @import"./base/variables";
 @import "./base/listas";
+@import "./base/maps"; 
+@import "./base/extend";
+@import "./base/mixin";
 @import "./componentes/main";
 
 
@@ -34,24 +37,18 @@ html{
 }
 
 h1{
-    font-family: 'Roboto', sans-serif;
-    font-size: nth($size, 4);
-    color: nth($colores, 3);
+    @include titulos;
 }
 
 .graciasPorVisitarnos{
     p{
-        font-family: 'Times New Roman', Times, serif;
-        font-size: nth($size, 4);
-        color: nth($colores, 2);
-        text-align: justify;
+        @extend %disposicion;
+        @extend %color;
     }
 }
 
 h2{
-    font-family:'Roboto', sans-serif;
-    font-size: nth($size, 4);
-    color: nth($colores , 3);
+   @include titulos;
 }
 
 .quienesSomos{
@@ -77,11 +74,11 @@ hr{
 .column2{
     ul{
         li{
-            display: inline-block;
+            display: map-get($footer, display-footer);
             font-size: nth($size, 8);
-            list-style: none;
-            align-items: center;
-            padding: 2px;
+            list-style: map-get($footer, list-style-footer);
+            align-items: map-get($footer, align-items-footer);
+            padding: map-get($footer, padding-footer);
         }
     }
 }
@@ -92,8 +89,8 @@ hr{
             font-size: nth($size, 8);
             font-family: 'Times New Roman', Times, serif;
             color: nth($colores, 2);
-            list-style: none;
-            text-align: justify;
+            list-style: map-get($footer, list-style-footer);
+            text-align: map-get($footer, text-align-footer);
         }
     }
 }
